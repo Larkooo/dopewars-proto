@@ -17,7 +17,7 @@ export class Game extends Scene {
       if (!this.hoveredTile)
         return;
 
-      this.cameras.main.pan(this.hoveredTile.getCenterX(), this.hoveredTile.getCenterY(), 1000, 'Sine.easeInOut');
+      this.cameras.main.pan(this.input.activePointer.worldX, this.input.activePointer.worldY, 1000, 'Sine.easeInOut');
     });
 
     this.map = this.make.tilemap({ key: "map" });
